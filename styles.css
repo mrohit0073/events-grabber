@@ -1,0 +1,194 @@
+/* Reset some default styles to ensure consistency across browsers */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+/*    background-color: #fff;
+    font-family: Arial, sans-serif;*/
+    background-image: url('AdobeStock_298473896.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+/*    background-color: #fff;*/
+    font-weight: bold;
+    color: #000;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+/*    background-color: #fff;*/
+    color: #000;
+    padding: 20px;
+}
+
+/* Style the form container */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+.indexbox {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+/* Style the file input */
+input[type="file"] {
+    width: calc(100% - 22px); /* Adjust padding and border width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #D094EA; /* Use the desired color */
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+    border-radius: 5px;
+}
+
+/* Style the file input on hover */
+input[type="file"]:hover {
+    border-color: #9f00e9; /* Change the border color on hover */
+}
+
+/* Style the file input on focus */
+input[type="file"]:focus {
+    border-color: #9f00e9; /* Change the border color on focus */
+    outline: none; /* Remove the outline */
+}
+
+
+/* Style the buttons */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #D094EA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+/* Style the reset button on hover */
+button:hover {
+    background-color: #9f00e9;
+}
+
+/* Style the reset button */
+#resetBtn {
+    background-color: #F59794; /* Change the color to red */
+    margin-top: 10px;
+}
+
+/* Style the reset button on hover */
+#resetBtn:hover {
+    background-color: #ee534e; /* Change the color to a different shade of red on hover */
+}
+
+/* Add CSS for center-aligning the button container */
+.button-container {
+    text-align: center;
+    margin-top: -20px; /* Adjust margin as needed */
+
+}
+
+/* Style the home button */
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D094EA;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underlines from the anchor */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+}
+
+/* Style the home button on hover */
+.home-button:hover {
+    background-color: #9f00e9;
+}
+
+/* Center-align the table container */
+#result {
+    display: none;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+/* Center-align the table */
+table {
+    width: 100%;
+    margin: 0 auto; /* Center-align the table horizontally */
+    border-collapse: collapse;
+}
+
+
+/* Style the table header with rounded corners for the outside borders */
+th {
+    background-color: #D094EA;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    position: relative; /* Add relative positioning for pseudo-elements */
+}
+
+/* Style the table rows */
+tr {
+    border-bottom: 1px solid #ccc;
+
+}
+
+/* Style the table data cells */
+td {
+    padding: 10px;
+}
+
+/* Style the dimensions display */
+.dimensions {
+    border-radius: 5px;
+    background-color: #9f00e9;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+/*    background-color: #fff;*/
+    color: #000;
+    padding: 10px;
+}
+
+span {
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+
+

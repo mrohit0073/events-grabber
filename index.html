@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Main Page</title>
+
+</head>
+<body>
+    <header>
+        <h1 style="line-height: 50px;">
+            <img src="Acc_Logo_Black_Purple_RGB.png" alt="Sample Logo" id="logo" width="175px" height="50px">
+            <br> <!-- Replace "sample-logo.png" with your actual logo file -->Dashboard
+        </h1>
+    </header>
+        <div class="button-container indexbox">
+        <button id="eventsGrabberBtn">Events Grabber</button>
+        <button id="h5ValidatorBtn">H5 Validator</button>
+        </div>
+
+    <footer>
+        <span>Made with <i class="fa fa-heart" style="font-size:16px;color:red"></i> by RM
+    </span>
+    </footer>
+
+    <script>
+        document.getElementById("eventsGrabberBtn").addEventListener("click", function () {
+            window.location.href = "events_grabber.html"; // Navigate to the Events Grabber page
+        });
+
+                document.getElementById("h5ValidatorBtn").addEventListener("click", function () {
+            window.open("https://h5validator.appspot.com/dcm/asset", "_blank"); // Open the link in a new tab
+        });
+
+        // You can add similar code for the H5 Validator button to navigate to its page.
+    </script>
+</body>
+</html>

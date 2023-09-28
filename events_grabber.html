@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Events Grabber</title>
+</head>
+<body>
+    <header>
+        <h1 style="line-height: 50px;">
+            <img src="Acc_Logo_Black_Purple_RGB.png" alt="Sample Logo" id="logo" width="175px" height="50px">
+            <br> <!-- Replace "sample-logo.png" with your actual logo file -->Events Grabber
+        </h1>
+    </header>
+    <div class="button-container">
+        <a href="index.html" class="home-button">
+            <i class="fa fa-home"></i> Dashboard
+        </a>
+    </div>
+    <form id="zipForm" enctype="multipart/form-data">
+        <input type="file" name="zipFile" accept=".zip">
+        <button type="button" id="submitBtn">Upload</button>
+        <button type="button" id="resetBtn">Reset</button>
+    </form>
+    <div id="result"></div>
+
+    <!-- Include JSZip library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
+    <!-- Include your custom JavaScript -->
+    <script src="script.js"></script>
+    <!-- Footer with your signature -->
+    <footer><span>Made with <i class="fa fa-heart" style="font-size:16px;color:red"></i> by RM
+    </span></footer>
+</body>
+</html>
