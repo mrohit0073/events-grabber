@@ -164,10 +164,14 @@ tr {
 
 }
 
-/* Style the table data cells */
-td {
+/* Style the table data cells with word breaking */
+td.url-cell {
+    word-break: break-all;
+    white-space: normal;
+    max-width: 100%;
     padding: 10px;
 }
+
 
 /* Style the dimensions display */
 .dimensions {

@@ -5,13 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add event listeners to the reset button
     resetButton.addEventListener("click", function () {
-        // Clear the file input by creating a new input element and replacing the old one
-        const newFileInput = document.createElement("input");
-        newFileInput.type = "file";
-        newFileInput.name = "zipFile";
-        newFileInput.accept = ".zip";
-
-        fileInput.parentNode.replaceChild(newFileInput, fileInput);
+        // Reset the file input to clear the selected file
+        fileInput.value = null;
 
         // Reset the result area
         const resultSection = document.getElementById("result");
@@ -21,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add event listener to the upload button
     document.getElementById("submitBtn").addEventListener("click", function () {
-        const zipFile = document.querySelector('input[type="file"]').files[0];
+        const zipFile = fileInput.files[0];
         if (!zipFile) {
             alert("Please select a ZIP file.");
             return;
@@ -54,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             const width = gwdPageElement.getAttribute("data-gwd-width");
                             const height = gwdPageElement.getAttribute("data-gwd-height");
 
-                            // Display width and height at the top of the result section with different CSS styling
+                            // Get the file name
+                            const fileName = zipFile.name;
+
+                            // Display width, height, file size, and file name in the same section
                             const resultSection = document.getElementById("result");
 
                             // Create a new container for this set of results
@@ -62,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             const dimensionsDiv = document.createElement("div");
                             dimensionsDiv.className = "dimensions";
-                            dimensionsDiv.innerHTML = `Width: ${width}, Height: ${height}, File Size: ${fileSizeKB} KB`;
+                            dimensionsDiv.innerHTML = `Width: ${width}, Height: ${height}, File Size: ${fileSizeKB} KB, File Name: ${fileName}`;
 
                             newResultContainer.appendChild(dimensionsDiv);
 
@@ -100,15 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
                                 const metric = gwdExitElement.getAttribute("metric");
                                 const url = gwdExitElement.getAttribute("url");
 
-                                // Create a table row and cells for metric and URL
+                                // Create a table row
                                 const row = document.createElement("tr");
+
+                                // Create a metric cell
                                 const metricCell = document.createElement("td");
-                                const urlCell = document.createElement("td");
-
                                 metricCell.textContent = metric;
-                                urlCell.textContent = url;
-
                                 row.appendChild(metricCell);
+
+                                // Create a URL cell
+                                const urlCell = document.createElement("td");
+                                urlCell.textContent = url;
+                                urlCell.classList.add("url-cell"); // Apply the new CSS class to the URL cell
                                 row.appendChild(urlCell);
 
                                 tbody.appendChild(row);
