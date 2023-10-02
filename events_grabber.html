@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Events Grabber</title>
+    <style>
+        /* Add any additional CSS styles here */
+        /* ... */
+    </style>
 </head>
 <body>
     <header>
-        <h1 style="line-height: 50px;">
-            <img src="Acc_Logo_Black_Purple_RGB.png" alt="Sample Logo" id="logo" width="175px" height="50px">
-            <br> <!-- Replace "sample-logo.png" with your actual logo file -->Events Grabber
-        </h1>
+        <div class="button-container">
+            <a href="index.html" class="home-button">
+                <i class="fa fa-home"></i> Dashboard
+            </a>
+            <h1>
+                <img src="Acc_Logo_Black_Purple_RGB.png" alt="Sample Logo" id="logo" width="175px" height="50px">
+                <br>Events Grabber
+            </h1>
+            <button type="button" id="resetBtn"><i class="fa fa-refresh" style="margin-right: 5px;"></i>Reset</button>
+        </div>
     </header>
-    <div class="button-container">
-        <a href="index.html" class="home-button">
-            <i class="fa fa-home"></i> Dashboard
-        </a>
-    </div>
+    <header>
+        <div class="back-next-container">
+                <button type="button" id="backBtn" style="display: none;"><i class="fa fa-arrow-left" style="margin-right: 5px;"></i>Back</button>
+                <button type="button" id="nextBtn" style="display: none;"><i class="fa fa-arrow-right" style="margin-right: 5px;"></i>Next</button>
+        </div>
+    </header>
     <form id="zipForm" enctype="multipart/form-data">
-        <input type="file" name="zipFile" accept=".zip">
-        <button type="button" id="submitBtn">Upload</button>
-        <button type="button" id="resetBtn">Reset</button>
+        <input type="file" name="zipFiles" accept=".zip" multiple>
+            <div id="buttons-container"> <!-- Add an ID to this div -->
+                <button type="button" id="submitBtn">Upload</button>
+            </div>
     </form>
+    
     <div id="result"></div>
+    <div class="banner-check-box-container" style="display: none">
+        <!-- Your bannerCheckBoxContainer content here -->
+    </div>
 
     <!-- Include JSZip library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>     
 
     <!-- Include your custom JavaScript -->
     <script src="script.js"></script>
     <!-- Footer with your signature -->
-    <footer><span>Made with <i class="fa fa-heart" style="font-size:16px;color:red"></i> by RM
-    </span></footer>
+    <footer><span>Made with <i class="fa fa-heart" style="font-size:16px;color:red"></i> by RM</span></footer>
 </body>
 </html>
